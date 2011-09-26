@@ -21,13 +21,13 @@
 #define __STACKWALKER_H__
 
 // Only valid in the following environment: Intel platform, MS VC++ 5/6/7/7.1
-#ifndef _X86_
-#error Only INTEL envirnoments are supported!
-#endif
+//#ifndef _X86_
+//#error Only INTEL envirnoments are supported!
+//#endif
 
 // Only MS VC++ 5 to 7
 #if (_MSC_VER < 1100) || (_MSC_VER > 1310)
-#error Only MS VC++ 5/6/7/7.1 supported. Check if the '_CrtMemBlockHeader' has not changed with this compiler!
+//#error Only MS VC++ 5/6/7/7.1 supported. Check if the '_CrtMemBlockHeader' has not changed with this compiler!
 #endif
 
 typedef enum eAllocCheckOutput

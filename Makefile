@@ -1,5 +1,5 @@
 # Makefile to build shared library
-# Copyright (c) 2004-2006 Ross Smith II (http://smithii.com). All rights reserved.
+# Copyright (c) 2004-2011 Ross Smith II (http://smithii.com). All rights reserved.
 # 
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of version 2 of the GNU General Public License 
@@ -12,17 +12,18 @@
 # 
 # $Id$
 
-VER?=1.1
+VER?=1.2
 APP=shared
-MSVC_DIR?=/cygdrive/c/PROGRA~1/MICROS~4/VC98
+VC98?=$(PROGRAMFILES)\\Microsoft Visual Studio\\VC98
+MSVC_DIR?=$(shell cygpath -u `cygpath -ds "$(VC98)"`)
 CYGENV=MAKEFLAGS="" PATH=$(MSVC_DIR)/bin:$$PATH
 APP_ZIP?=$(APP)-$(VER)-win32.zip
 SRC_ZIP?=$(APP)-$(VER)-win32-src.zip
 ZIP?=zip
-ZIP_OPTS?=-9jquX
+ZIP_OPTS?=-9quX
 CWD=$(shell pwd)
 APP_FILES=shared.lib sharedd.lib sharedu.lib shareddu.lib changelog.txt COPYING readme.txt
-SRC_FILES=$(APP_FILES) $(shell ls *.cpp *.c *.h *.hpp *.inl *.dsp *.dsw *.mak *.dep Makefile 2>nul)
+SRC_FILES=$(APP_FILES) $(shell ls *.cpp *.c *.h *.hpp *.inl *.dsp *.dsw *.mak *.dep *.vcxproj Makefile 2>nul)
 
 .PHONY:	dist
 dist:	all $(APP_ZIP) $(SRC_ZIP)

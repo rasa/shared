@@ -1,5 +1,5 @@
-shared 1.1 - 19 Jul 2006
-Copyright (c) 2005-2006 Ross Smith II (http://smithii.com) All Rights Reserved
+shared - Version 1.2 - 26 Sep 2011
+Copyright (c) 2005-2011 Ross Smith II (http://smithii.com) All Rights Reserved
 
 ------------------------------------------------------------------------------
 
