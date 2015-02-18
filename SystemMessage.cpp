@@ -15,6 +15,10 @@ General Public License for more details.
 
 */
 
+#ifdef _MSC_VER
+#pragma warning(disable:4996)
+#endif
+
 #include <windows.h>
 #include <stdio.h>
 

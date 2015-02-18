@@ -51,6 +51,10 @@
 
 //#include "config.h"
 
+#ifdef _MSC_VER
+#pragma warning(disable:4996)
+#endif
+
 #if !defined (__STDC__) || !__STDC__
 /* This is a separate conditional since some stdc systems
    reject `defined (const)'.  */

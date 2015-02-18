@@ -1,0 +1,21 @@
+# Microsoft Developer Studio Generated Dependency File, included by shared.mak
+
+.\getopt.c : \
+	".\getopt.h"\
+	
+
+.\SystemMessage.cpp : \
+	{$(INCLUDE)}"basetsd.h"\
+	{$(INCLUDE)}"guiddef.h"\
+	{$(INCLUDE)}"propidl.h"\
+	{$(INCLUDE)}"reason.h"\
+	{$(INCLUDE)}"specstrings.h"\
+	{$(INCLUDE)}"stralign.h"\
+	{$(INCLUDE)}"tvout.h"\
+	{$(INCLUDE)}"winefs.h"\
+	".\SystemMessage.h"\
+	
+
+.\tgetopt.c : \
+	".\tgetopt.h"\
+	

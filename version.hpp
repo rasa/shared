@@ -34,7 +34,8 @@ public:
 		// Get version info
 		DWORD h = 0;
 
-		DWORD resource_size = ::GetFileVersionInfoSize(filename.c_str(), &h);
+		char *p = const_cast<char *>(filename.c_str());
+		DWORD resource_size = ::GetFileVersionInfoSize(p, &h);
 
 		if (!resource_size) {
 //			throw std::exception(); // "Version information not found");

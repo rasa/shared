@@ -17,6 +17,10 @@ General Public License for more details.
 
 #ifdef _DEBUG
 
+#ifdef _MSC_VER
+#pragma warning(disable:4996)
+#endif
+
 #include "debug.h"
 
 #ifndef WIN32_LEAN_AND_MEAN
