@@ -62,12 +62,13 @@ CreateShellLink(
  
         if (SUCCEEDED(hres)) { 
             WORD wsz[MAX_PATH]; 
- 
+			LPWSTR p = (LPWSTR) wsz;
+
             // Ensure that the string is ANSI. 
-            MultiByteToWideChar(CP_ACP, 0, lpszLinkPath, -1, wsz, MAX_PATH); 
+            MultiByteToWideChar(CP_ACP, 0, lpszLinkPath, -1, p, MAX_PATH); 
  
             // Save the link by calling IPersistFile::Save. 
-            hres = ppf->Save(wsz, TRUE); 
+            hres = ppf->Save(p, TRUE); 
             ppf->Release(); 
         } 
         psl->Release(); 
