@@ -1,19 +1,4 @@
-/*
-
-$Id$
-
-Copyright (c) 2002-2013 Ross Smith II (http://smithii.com). All rights reserved.
-
-This program is free software; you can redistribute it and/or modify it
-under the terms of version 2 of the GNU General Public License
-as published by the Free Software Foundation.
-
-This program is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-General Public License for more details.
-
-*/
+// Copyright (c) 2002-2015 Ross Smith II. See Mit LICENSE in /LICENSE
 
 #ifndef VER_INTERNAL_NAME
 #warning Please define VER_INTERNAL_NAME
@@ -30,7 +15,7 @@ General Public License for more details.
 #endif
 
 #ifndef VER_LEGAL_COPYRIGHT
-#define VER_LEGAL_COPYRIGHT		"Copyright (c) 2005-2013 Ross Smith II. All Rights Reserved."
+#define VER_LEGAL_COPYRIGHT		"Copyright (c) 2002-2015 Ross Smith II. MIT Licensed."
 #endif
 
 #ifndef VER_COMMENTS
