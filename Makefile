@@ -17,12 +17,12 @@ dist:	all $(APP_ZIP) $(SRC_ZIP)
 $(APP_ZIP):	$(APP_FILES)
 	-rm -f $(APP_ZIP)
 	chmod +x $^
-	${ZIP} ${ZIP_OPTS} $@ $^
+	$(ZIP) $(ZIP_OPTS) $@ $^
 
 $(SRC_ZIP):	$(SRC_FILES)
 	-rm -f $(SRC_ZIP)
 	chmod +x $^
-	${ZIP} ${ZIP_OPTS} $@ $^
+	$(ZIP) $(ZIP_OPTS) $@ $^
 
 .PHONY:	distclean
 distclean:	clean
