@@ -1,13 +1,16 @@
-shared lib changelog
+## 1.3 (unreleased)
 
-Version 1.2 - 26 Sep 11
+  * Updated to Visual Studio 2013
+  * Switch to MIT license
 
-	Updated for Visual Studio 2010 Express
+## 1.2 (26 Sep 11)
 
-Version 1.1 - 19 Jul 06:
+  * Updated for Visual Studio 2010 Express
 
-	Standardized version information across all programs
+## 1.1 (19 Jul 06)
 
-Version 1.0 - 08 Apr 06:
+  * Standardized version information across all programs
 
-	Initial release
+## 1.0 (08 Apr 06)
+
+  * Initial release
