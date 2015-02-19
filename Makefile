@@ -1,21 +1,10 @@
-# Makefile to build shared library
-# Copyright (c) 2004-2006 Ross Smith II (http://smithii.com). All rights reserved.
-# 
-# This program is free software; you can redistribute it and/or modify it
-# under the terms of version 2 of the GNU General Public License 
-# as published by the Free Software Foundation.
-# 
-# This program is distributed in the hope that it will be useful, but
-# WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
-# 
-# $Id$
+# shared
 
-VER?=1.1
+VER?=1.3
 APP=shared
-APP_FILES=shared.lib sharedd.lib sharedu.lib shareddu.lib changelog.txt COPYING readme.txt
-SRC_FILES=$(APP_FILES) $(wildcard Makefile *.c *.cpp *.h *.hpp *.dsp *.dep *.dsw *.mak)
+APP_FILES=CHANGELOG.md LICENSE README.md $(wildcard *.lib)
+SRC_FILES=$(APP_FILES) $(wildcard Makefile *.cpp *.dep *.dsp *.dsw *.h *.ico *.mak *.rc *.sln *.vcproj *.vcxproj *.vcxproj.filters)
+SRC_FILES+=$(wildcard *.hpp)
 
 APP_ZIP?=$(APP)-$(VER)-win32.zip
 SRC_ZIP?=$(APP)-$(VER)-win32-src.zip
@@ -39,6 +28,8 @@ $(SRC_ZIP):	$(SRC_FILES)
 distclean:	clean
 	rm -f $(APP_ZIP) $(SRC_ZIP)
 
-.PHONY:	all clean realclean
-
+ifneq (,$(shell which MSBuild.exe 2>/dev/null))
+include msbuild.mak
+else
 include nmake.mak
+endif

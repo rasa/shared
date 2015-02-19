@@ -1,12 +1,12 @@
 // Copyright (c) 2002-2015 Ross Smith II. See Mit LICENSE in /LICENSE
 
 #ifndef VER_INTERNAL_NAME
-#warning Please define VER_INTERNAL_NAME
+#pragma message("Please define VER_INTERNAL_NAME")
 #define VER_INTERNAL_NAME 		""
 #endif
 
 #ifndef VER_FILE_DESCRIPTION
-#warning Please define VER_FILE_DESCRIPTION
+#pragma message("Please define VER_FILE_DESCRIPTION")
 #define	VER_FILE_DESCRIPTION	""
 #endif
 
@@ -27,11 +27,11 @@
 #endif
 
 #ifndef VER_MINOR
-#define VER_MINOR				2
+#define VER_MINOR				3
 #endif
 
 #ifndef VER_STRING2
-#define VER_STRING2				"1.2"
+#define VER_STRING2				"1.3"
 #endif
 
 #ifndef VER_REVISION
