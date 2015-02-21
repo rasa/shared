@@ -2,7 +2,7 @@
 
 VER?=1.3
 APP=shared
-APP_FILES=CHANGELOG.md LICENSE README.md $(wildcard *.lib)
+APP_FILES=CHANGELOG.md LICENSE README.md shared.lib sharedd.lib shareddu.lib sharedu.lib
 SRC_FILES=$(APP_FILES) $(wildcard Makefile *.cpp *.dep *.dsp *.dsw *.h *.ico *.mak *.rc *.sln *.vcproj *.vcxproj *.vcxproj.filters)
 SRC_FILES+=$(wildcard *.hpp)
 
