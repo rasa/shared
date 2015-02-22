@@ -1,4 +1,4 @@
-## 1.3 (20-Feb-2015)
+## 1.3 (22-Feb-2015)
 
   * Improve command line option processing
   * Updated to Visual Studio 2013
