@@ -1,3 +1,8 @@
+## 1.4 (27-Mar-2015)
+
+  * Standardize build scripts
+  * Update documentation
+
 ## 1.3 (22-Feb-2015)
 
   * Improve command line option processing
