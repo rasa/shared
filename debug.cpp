@@ -1,4 +1,4 @@
-// Copyright (c) 2005-2015 Ross Smith II. See Mit LICENSE in /LICENSE
+// Copyright (c) 2005-2016 Ross Smith II. See Mit LICENSE in /LICENSE
 
 #ifdef _DEBUG
 
@@ -21,13 +21,30 @@
 #include <stdlib.h>
 
 static int __time = 1;
+#if defined(UNICODE) || defined(_UNICODE)
+static wchar_t __file[255];
+#define _FS "%ls"
+#else
 static char __file[255];
+#define _FS "%hs"
+#endif
+
 static int __line;
 
 void dsettime(int time) {
 	__time = time;
 }
 
+#if defined(UNICODE) || defined(_UNICODE)
+void dsetA(wchar_t* file, int line) {
+	wchar_t fname[_MAX_FNAME];
+	wchar_t ext[_MAX_EXT];
+	_wsplitpath(file, NULL, NULL, fname, ext);
+	wcscpy(__file, fname);
+	wcscat(__file, ext);
+	__line = line;
+}
+#else
 void dsetA(char* file, int line) {
 	char fname[_MAX_FNAME];
 	char ext[_MAX_EXT];
@@ -36,6 +53,7 @@ void dsetA(char* file, int line) {
 	strcat(__file, ext);
 	__line = line;
 }
+#endif
 
 void dprintfA(const char* str, ...) {
 	va_list marker;
@@ -55,7 +73,7 @@ void dprintfA(const char* str, ...) {
 	}
 
 	if (__file) {
-		sprintf(buffer2, "%s:%d: ", __file, __line);
+		sprintf(buffer2, _FS ":%d: ", __file, __line);
 		strcat(buffer, buffer2);
 	}
 
@@ -83,7 +101,7 @@ void dprintfW(const wchar_t* str, ...) {
 	}
 
 	if (__file) {
-		swprintf(buffer2, L"%s:%d: ", __file, __line);
+		swprintf(buffer2, L"%s:%d: ", (wchar_t *) __file, __line);
 		wcscat(buffer, buffer2);
 	}
 

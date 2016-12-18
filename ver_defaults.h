@@ -1,4 +1,4 @@
-// Copyright (c) 2002-2015 Ross Smith II. See Mit LICENSE in /LICENSE
+// Copyright (c) 2002-2016 Ross Smith II. See Mit LICENSE in /LICENSE
 
 #ifndef VER_INTERNAL_NAME
 #pragma message("Please define VER_INTERNAL_NAME")
@@ -15,7 +15,7 @@
 #endif
 
 #ifndef VER_LEGAL_COPYRIGHT
-#define VER_LEGAL_COPYRIGHT     "Copyright (c) 2002-2015 Ross Smith II. MIT Licensed."
+#define VER_LEGAL_COPYRIGHT     "Copyright (c) 2002-2016 Ross Smith II. MIT Licensed."
 #endif
 
 #ifndef VER_COMMENTS

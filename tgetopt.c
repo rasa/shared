@@ -51,6 +51,8 @@
 
 //#include "config.h"
 
+#if defined(UNICODE) || defined(_UNICODE)
+
 #ifdef _MSC_VER
 #pragma warning(disable:4996)
 #endif
@@ -727,4 +729,6 @@ int *opt_index;
 {
 	return _tgetopt_internal (argc, argv, options, long_options, opt_index, 1);
 }
+
+#endif /* defined(UNICODE) || defined(_UNICODE) */
 

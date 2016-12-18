@@ -1,11 +1,9 @@
-## 1.5 (unreleased)
+## 1.4 (18-Dec-2016)
 
-  * Update Makefile
-  
-## 1.4 (27-Mar-2015)
-
+  * Update to Visual Studio 2015
   * Standardize build scripts
   * Update documentation
+  * Quiet warnings
 
 ## 1.3 (22-Feb-2015)
 

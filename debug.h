@@ -14,7 +14,7 @@ extern void dsettime(int time);
 #ifdef _DEBUG
 
 #if defined(UNICODE) || defined(_UNICODE)
-#define D(args) dsetA(((char*)__FILE__), __LINE__); dprintfW args
+#define D(args) dsetA(((wchar_t*)__FILE__), __LINE__); dprintfW args
 #else
 #define D(args) dsetA(((char*)__FILE__), __LINE__); dprintfA args
 #endif
