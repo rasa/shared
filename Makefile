@@ -1,4 +1,4 @@
-# Copyright (c) 2002-2015, Ross Smith II. MIT licensed.
+# Copyright (c) 2002-2016, Ross Smith II. MIT licensed.
 
 ## dependencies:
 ## Cygwin
@@ -32,7 +32,11 @@ VER?=$(strip $(shell sed -rne 's/^\s*\#define\s+(VER_STRING2|PACKAGE_VERSION)\s+
 APP?=$(strip $(shell sed -rne 's/^\s*\#define\s+(VER_INTERNAL_NAME|PACKAGE)\s+"([^"]*)".*/\2/p' version.h))
 endif
 
-APP_EXE:=$(APP).exe
+ifeq ("$(APP)", "")
+APP=$(notdir $(PWD))
+endif
+
+APP_EXE?=$(APP).exe
 
 APP_FILES:=\
 $(APP_EXE) \
@@ -251,7 +255,7 @@ endif
 
 #######################################################################
 
-RELEASE_UPX_EXE:=$(dir $(RELEASE_APP_EXE))upxed/$(notdir $(RELEASE_APP_EXE))
+RELEASE_UPX_EXE?=$(dir $(RELEASE_APP_EXE))upxed/$(notdir $(RELEASE_APP_EXE))
 
 $(eval $(call UPX_FILE,$(RELEASE_APP_EXE),$(RELEASE_UPX_EXE)))
 
